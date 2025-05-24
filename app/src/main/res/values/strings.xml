@@ -1,0 +1,146 @@
+<resources>
+    <string name="app_name">Where\'s My Device</string>
+    <string name="display_over_other_apps">Display Over Other Apps</string>
+    <string name="display_over_other_apps_request_description">This permission is required for the app to display messages and alerts when your device is lost.</string>
+    <string name="settings">Settings</string>
+    <string name="dont_show_again">Don\'t Show Again</string>
+    <string name="cancel">Cancel</string>
+    <string name="locate_my_device_is_running">Where\'s My Device is running</string>
+    <string name="permissions">Permissions</string>
+    <string name="sms">SMS</string>
+    <string name="location">Location</string>
+    <string name="background_location">Background Location</string>
+    <string name="calls">Calls</string>
+    <string name="granted">Granted</string>
+    <string name="not_granted">Not Granted</string>
+    <string name="open_app_settings">Open App Settings</string>
+    <string name="whitelist">Whitelist</string>
+    <string name="whitelist_empty">No phone numbers in whitelist. Add numbers to restrict who can interact with your device.</string>
+    <string name="enable_whitelist">Enable whitelist</string>
+    <string name="whitelist_description">Only allow specific phone numbers to control your device</string>
+    <string name="manage_whitelist">Manage whitelist</string>
+    <string name="more_settings_coming_soon">More settings will be added soon</string>
+    <string name="add_from_contacts">Add from Contacts</string>
+    <string name="add_manually">Add Manually</string>
+    <string name="add_contact_manually">Add Contact Manually</string>
+    <string name="contact_name">Contact Name (Optional)</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="phone_number_error">Please enter a valid phone number</string>
+    <string name="add">Add</string>
+    <string name="unknown_command">Unknown command. Send "help" for a list of available commands.</string>
+    <string name="device_location">Device location: %1$.6f, %2$.6f</string>
+    <string name="location_not_available">Location information is not available.</string>
+    <string name="ring_command_received">Ring Command Received</string>
+    <string name="device_info">Battery: %1$d%%\nCharging: %2$s\nScreen On: %3$s\nWiFi: %4$s\nTime: %5$s</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="enabled">Enabled</string>
+    <string name="disabled">Disabled</string>
+    <string name="wifi_enabled">WiFi has been enabled.</string>
+    <string name="wifi_disabled">WiFi has been disabled.</string>
+    <string name="wifi_status">WiFi is currently %1$s.</string>
+    <string name="available_commands">Available commands:\n\n%1$s locate - Get device location\n%1$s ring - Play sound at max volume\n%1$s callme - Make device call you back\n%1$s ping - Check if WMD service is running\n%1$s info - Device status\n%1$s wifi [on/off] - Control WiFi\n%1$s sound [normal/vibrate/silent] - Control sound mode\n%1$s help - Show this help</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="command_settings">Command Settings</string>
+    <string name="command_settings_description">Configure SMS commands used to control your device</string>
+    <string name="command_prefix">Command Prefix</string>
+    <string name="command_prefix_description">This text will be required at the beginning of each SMS command</string>
+    <string name="command_prefix_explanation">A command prefix adds security by requiring all commands to start with specific text. For example, if the prefix is "WMD", commands will be "WMD locate", "WMD ring", etc. Choose a unique prefix that only you know.</string>
+    <string name="save">Save</string>
+    <string name="ok">OK</string>
+    <string name="available_commands_header">Available SMS Commands</string>
+    <string name="learn_more">Learn More</string>
+    <string name="how_commands_work">How Commands Work</string>
+    <string name="commands_help_text">To control your device remotely, send SMS messages that start with your command prefix (%1$s) followed by a command.\n\nFor example, to locate your device, send:\n\n%1$s locate\n\nThe device will respond with its location.</string>
+    <string name="command_locate_description">Get your device\'s current location</string>
+    <string name="command_ring_description">Make your device ring at maximum volume</string>
+    <string name="command_info_description">Get device status information</string>
+    <string name="command_wifi_description">Turn device WiFi on or off</string>
+    <string name="command_help_description">Show available commands</string>
+    <string name="command_callme_description">Make your device call you back immediately</string>
+    <string name="call_me_received">Call request received. Calling you back now...</string>
+    <string name="call_permission_required">Call permission is required for this operation.</string>
+    <string name="error_making_call">Error attempting to call you back.</string>
+    <string name="back">Back</string>
+    <string name="help">Help</string>
+    <string name="prefix_required">Command prefix is required</string>
+    <string name="command_example_format">%1$s %2$s %3$s</string>
+    <string name="command_example_format_with_param">%1$s %2$s %3$s [%4$s]</string>
+    <string name="command_password">Command Password</string>
+    <string name="command_password_description_required">Password required for all SMS commands</string>
+    <string name="command_password_explanation_required">All SMS commands require a password in this format: "prefix command password [parameters]". For example: "WMD locate mypassword". This adds an extra layer of security to prevent unauthorized use of commands even if someone knows your command prefix.</string>
+    <string name="how_to_use">How to use</string>
+    <string name="prefix">Prefix</string>
+    <string name="missing_password">Missing password. Command format should be: command password [parameters]</string>
+    <string name="invalid_password">Invalid password. Please check your command and try again.</string>
+    <string name="available_commands_with_password">Available commands:\n\n
+%1$s locate %2$s - Get your device\'s current GPS location\n
+%1$s ring %2$s - Make your device ring at maximum volume even if silenced\n
+%1$s callme %2$s - Make your device call you back immediately\n
+%1$s info %2$s - Get battery level, charging status, and network info\n
+%1$s ping %2$s - Check if the WMD service is running\n
+%1$s wifi %2$s on - Turn WiFi on\n
+%1$s wifi %2$s off - Turn WiFi off\n
+%1$s wifi %2$s - Get current WiFi status\n
+%1$s sound %2$s [mode] - Change sound mode (normal/vibrate/silent) or get status\n
+%1$s help %2$s - Show this list of commands</string>
+    <string name="commands_help_text_required">Control your device remotely by sending SMS messages in this format:\n\n%1$s command %2$s\n\nFor example:\n\n• %1$s locate %2$s - Find your device location\n• %1$s ring %2$s - Play loud sound\n\nThe device will respond with confirmation or requested information.</string>
+    <string name="enable_biometric_auth" translatable="false">Use Biometric Authentication</string>
+    <string name="biometric_auth_explanation" translatable="false">Allow fingerprint or face recognition for quick access to the app</string>
+    <string name="use_biometric">Use Biometric</string>
+    <string name="biometric_prompt_title">Authenticate to access Where\'s My Device</string>
+    <string name="biometric_prompt_subtitle">Confirm your identity to continue</string>
+    <string name="biometric_prompt_cancel">Cancel</string>
+    <string name="biometric_not_available" translatable="false">Biometric authentication is not available on this device</string>
+    <string name="password">Password</string>
+    <string name="password_required">Password is required</string>
+    <string name="passwords_do_not_match">Passwords do not match</string>
+    <string name="incorrect_password">Incorrect password</string>
+    <string name="security">Security</string>
+    <string name="app_permission">App Permissions</string>
+    <string name="app_information">App Information</string>
+    <string name="about">About</string>
+    <string name="click_here_for_more_info">Information about this application</string>
+    <string name="app_description">Where\'s My Device is an open-source application that helps you locate and control your device remotely via SMS commands if it\'s lost or stolen.</string>
+    <string name="view_source_code">View Source Code</string>
+    <string name="app_version">App version:</string>
+    <!-- Sound Mode Command Strings -->
+    <string name="command_sound_description">Change device sound mode (normal, vibrate, silent)</string>
+    <string name="sound_mode_normal">Sound mode has been set to normal.</string>
+    <string name="sound_mode_vibrate">Sound mode has been set to vibrate only.</string>
+    <string name="sound_mode_silent">Sound mode has been set to silent.</string>
+    <string name="sound_mode_current">Current sound mode: %1$s.</string>
+    <string name="sound_mode_error">Error changing sound mode. Please check permissions.</string>
+    <string name="sound_mode_normal_label">Normal</string>
+    <string name="sound_mode_vibrate_label">Vibrate</string>
+    <string name="sound_mode_silent_label">Silent</string>
+    <string name="sound_mode_unknown_label">Unknown</string>
+    <string name="sms_commands">SMS Commands</string>
+    <string name="settings_saved">Settings saved successfully</string>
+    <string name="wmd_ping_response">WMD service is running</string>
+    
+    <!-- Disclaimer Dialog -->
+    <string name="disclaimer_title">Important Information</string>
+    <string name="disclaimer_content">Where\'s My Device is designed to help you locate and control YOUR OWN device remotely if it\'s lost or stolen. The app requires several permissions to function correctly, which will be requested only when needed.\n\nThis app is NOT a surveillance tool, spy app, or hidden tracking software. It is meant for personal device recovery only.\n\nThis app is open source and respects your privacy. No data is collected or shared with third parties.</string>
+    <string name="permissions_explanation_title">About App Permissions</string>
+    <string name="permissions_explanation_content">We request permissions only when needed and will explain why each permission is necessary before requesting it. You can always manage permissions in your device settings.</string>
+    <string name="accept_and_continue">Accept &amp; Continue</string>
+    <string name="decline">Decline</string>
+    
+    <!-- Permission explanations -->
+    <string name="permission_explanation_generic">This permission is needed for the app to function properly.</string>
+    <string name="permission_explanation_sms_receive">This permission allows the app to receive SMS commands when your device is lost, enabling you to locate and control it remotely.</string>
+    <string name="permission_explanation_sms_send">This permission allows the app to send SMS responses with your device location and status when you request it remotely.</string>
+    <string name="permission_explanation_location">This permission is needed to determine your device\'s location when requested via SMS command.</string>
+    <string name="permission_explanation_location_fine">This permission provides precise location information when you try to locate your lost device.</string>
+    <string name="permission_explanation_location_background">This permission allows the app to determine your device\'s location even when the app is not actively being used, which is essential for locating a lost device.</string>
+    <string name="permission_explanation_call_phone">This permission allows the app to call you back when you send the \"callme\" command to your lost device.</string>
+    <string name="permission_explanation_contacts">This permission allows you to easily add trusted contacts to your whitelist from your contact list.</string>
+    <string name="permission_explanation_audio">This permission allows the app to adjust sound settings on your device, which is needed for the \"ring\" command to work properly.</string>
+    <string name="permission_explanation_overlay">This permission allows the app to display important messages and alerts on top of other apps when your device is lost or when receiving commands.</string>
+    
+    <!-- Surveillance disclaimer -->
+    <string name="anti_surveillance_title">Not a Surveillance Tool</string>
+    <string name="anti_surveillance_message">Where\'s My Device is NOT designed for covert surveillance or tracking others without their knowledge. It is meant to be installed on YOUR OWN devices to help you locate them if lost or stolen. Using this app to track others without their knowledge may be illegal in your jurisdiction.</string>
+    <string name="message_feature_disabled">This feature has been disabled to comply with Play Store policies.</string>
+</resources>

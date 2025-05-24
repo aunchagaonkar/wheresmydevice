@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Essential for SMS commands functionality -->
+    <uses-permission android:name="android.permission.RECEIVE_SMS" android:protectionLevel="dangerous" />
+    <uses-permission android:name="android.permission.SEND_SMS" android:protectionLevel="dangerous" />
+    
+    <!-- Location permissions - required for locating the device -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" android:protectionLevel="dangerous" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" android:protectionLevel="dangerous" />
+    <!-- Background location is only requested when explicitly needed -->
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" android:protectionLevel="dangerous" />
+    
+    <!-- For "callme" feature - to call back the owner -->
+    <uses-permission android:name="android.permission.CALL_PHONE" android:protectionLevel="dangerous" />
+    
+    <!-- For overlay UI during remote control -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    
+    <!-- For contact selection in whitelist - only used if user chooses to add contacts -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" android:protectionLevel="dangerous" />
+    
+    <!-- For remote ringing functionality -->
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.WheresMyDevice"
+        tools:targetApi="31">
+        
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.WheresMyDevice">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="false" />
+            
+        <activity
+            android:name=".PermissionsActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".WhitelistActivity"
+            android:exported="false" />
+
+        <!-- SMS Receiver - for processing SMS commands -->
+        <receiver
+            android:name=".receiver.SmsReceiver"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.BROADCAST_SMS">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Overlay Display Service - for showing alerts when device is locked/lost -->
+        <service
+            android:name=".service.OverlayDisplayService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <activity
+            android:name=".CommandSettingsActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".AboutActivity"
+            android:exported="false" />
+    </application>
+
+</manifest>
